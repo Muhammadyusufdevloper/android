@@ -1,0 +1,133 @@
+#header{
+    padding: 20px 0;
+    display: none;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.header__left {
+    width: 110px;
+}
+.left__link {
+}
+.link__logo {
+    width: 100%;
+}
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.header__dropdowns {
+    display: flex;
+    gap:20px ;
+}
+.header__dropdown {
+    position: relative;
+}
+.header__dropdown__box {
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.header__dropdown__text {
+    color: var(--primer-color);
+    border-bottom: 2px solid transparent;
+    font-size: 16px;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.header__dropdown__text:hover {
+    border-bottom-color: var(--primer-color);
+}
+#arrow-up {
+    display: none;
+    cursor: pointer;
+}
+#arrow-top {
+    cursor: pointer;
+}
+.header__dropdowns__list {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(40px);
+    border-radius: 20px;
+    background-color: aqua;
+    padding: 20px;
+    z-index: 99;
+}
+.header__dropdown:hover .header__dropdown__list{
+    /* opacity: 3; */
+    transform: translate(0);
+    visibility: visible;
+}
+.header__dropdowns__item:not(:last-child){
+    margin-bottom: 20px;
+}
+.header__dropdowns__item__link {
+    color: var(--primer-color);
+    border-bottom: 2px solid transparent;
+    font-size: 14px;
+    transition: all .5s ease;
+}
+.header__dropdowns__item__link:hover {
+    border-bottom-color: var(--primer-color);
+}
+.header__btns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header__btns__search {
+    background-color: transparent;
+    border: none;
+}
+
+.header__btns__shop-phone {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 186px;
+    height: 48px;
+    border-radius: 30px;
+    background:var(--primer-color);
+    border: 1px solid var(--primer-color);
+    overflow: hidden;
+}
+.header__btns__shop-phone__text {
+    font-weight: 700;
+    color: var(--with-color);
+    z-index: 2;
+}
+.fa-arrow-right{
+    color: var(--arrow-color);
+}
+.header__btns__shop-phone::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left:-100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background-color:var(--with-color);
+    transition:all 0.5s ease;
+}
+.header__btns__shop-phone:hover.header__btns__shop-phone__text:hover{
+    color: var(--primer-color);
+}
+.header__btns__shop-phone:hover::after {
+    left: 0;
+}
+.header__btns__shop-phone__text:hover{
+}
+.header__btns__menue {
+    border: none;
+    background-color: transparent;
+}
